@@ -1,0 +1,57 @@
+.glitch-text {
+  position: relative;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  animation: glitch 1.5s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #00ff00;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch-text::before {
+  animation: glitchTop 2s infinite linear;
+}
+
+.glitch-text::after {
+  animation: glitchBottom 1.8s infinite linear;
+}
+
+@keyframes glitch {
+  0% { transform: none; }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: none; }
+}
+
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  10% { clip: rect(10px, 9999px, 80px, 0); transform: translate(-2px, -2px); }
+  20% { clip: rect(85px, 9999px, 140px, 0); transform: translate(2px, 2px); }
+  30% { clip: rect(5px, 9999px, 50px, 0); transform: translate(-1px, 1px); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+@keyframes glitchBottom {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  10% { clip: rect(60px, 9999px, 120px, 0); transform: translate(2px, 1px); }
+  20% { clip: rect(30px, 9999px, 80px, 0); transform: translate(-2px, -1px); }
+  30% { clip: rect(10px, 9999px, 60px, 0); transform: translate(1px, -2px); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+.glitch-subtext {
+  position: relative;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  animation: glitch 2s infinite;
+}

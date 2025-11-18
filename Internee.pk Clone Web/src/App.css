@@ -1,0 +1,157 @@
+
+@font-face {
+  font-family: Urbanist;
+  src: url(./assets/fonts/Urbanist.ttf);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background: var(--bs-black);
+}
+
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #000;
+  box-shadow: 0 0 0 0 #0004;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {
+    100% {box-shadow: 0 0 0 30px #0000}
+}
+
+
+#root {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --bs-black: #000;
+  --bs-white: #fff;
+  --bs-nav-items: #fff;
+  --bs-gray: #121212;
+  --bs-lightgray: #2c2c2c;
+  --bs-themeColor: #fff;
+  --bs-GreenColor: #43a724;
+  --bs-LightGreenColor: #132f0a;
+  --bs-dark: #1e1e1e;
+  --bs-themeGray: #1e2536;
+
+}
+.themeGray{
+  color: var(--bs-themeGray);
+}
+.themeBackground{
+  background-color: var(--bs-themeColor) ;
+
+}
+.DarkGrayBackground{
+  background-color: var(--bs-dark) ;
+
+}
+.LightGrayColorBackground{
+  background-color: var(--bs-lightgray) ;
+
+}
+.BlackColorBackground{
+  background-color: var(--bs-black) ;
+
+}
+.WhiteColorBackground{
+  background-color: var(--bs-white) !important;
+
+}
+.GreenColorBackground{
+  background-color: var(--bs-GreenColor) ;
+
+}
+.LightGreenColorBackground{
+  background-color: var(--bs-LightGreenColor) ;
+
+}
+.GrayColorBackground{
+  background-color: var(--bs-dark) !important ;
+
+}
+.themeText{
+  color: var(--bs-themeColor) !important;
+}
+.greenText{
+  color: var(--bs-GreenColor) !important;
+}
+.whiteText{
+  color: var(--bs-white) !important;
+  
+}
+.blackText{
+  color: var(--bs-black) !important;
+}
+.Urbanist{
+  font-family: Urbanist !important;
+}
+.NavBar{
+  width: 100% !important;
+}
+
+.navbar-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.navbar-container.fade-in {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar-container.fade-out {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black; 
+  color: white;
+}
+
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.toggle-icon {
+  transition: transform 0.5s ease; 
+}
+
+.toggle-icon.expanded {
+  transform: rotate(90deg); 
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+
+  .text-alignment{
+    text-align: start;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+ 
+  .text-alignment{
+    text-align: center;
+  }
+}
+
+
+
